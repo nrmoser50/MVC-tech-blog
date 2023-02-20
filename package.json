@@ -19,6 +19,8 @@
   "homepage": "https://github.com/nrmoser50/MVC-tech-blog#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "express-session": "^1.17.3",
     "sequelize": "^6.28.0"
   }
 }
