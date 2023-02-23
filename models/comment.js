@@ -20,7 +20,7 @@ Comment.init(
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
-            defaulteValue: DataTypes.NOW
+            defaultValue: DataTypes.NOW
         },
         user_id: {
             type: DataTypes.INTEGER,

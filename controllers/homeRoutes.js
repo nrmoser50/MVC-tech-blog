@@ -3,13 +3,14 @@ const { Post, User, Comment } = require('../models');
 
 // Render home page with existing blog posts
 router.get('/', async (req, res) => {
+    console.log("here")
     try {
         const postData = await Post.findAll({
             include: [{ model: User }],
         });
-        const post = postData.map((post) => post.get({ plain: true}));
+        const posts = postData.map((post) => post.get({ plain: true}));
 
-        res.render('homepage', {
+        res.render('dashboard', {
             posts,
             loggedIn: req.session.loggedIn,
         });
@@ -33,7 +34,7 @@ router.get('/post/:id', async (req, res) => {
 
         const post = postData.get({ plain: true });
 
-        res.render('single-post', {
+        res.render('singlePost', {
             post,
             loggedIn: req.session.loggedIn,
         });
