@@ -1,0 +1,25 @@
+<div class="card mb-3">
+    <div class="card-header bg-light">
+        <div class="row">
+            <div class="col-8">
+                <a href="/post/{{id}}" class="text-primary font-weight-bold">{{title}}</a>
+            </div>
+            <div class-="col-4 text-right">
+                <span class="badge badge-secondary">{{format_date_created_at}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{post_content}}</p>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-6">
+                <b>{{user.username}}</b>
+            </div>
+            <div class="col-6 text-right">
+                {{comments.length}} {{format_plural "comment" comments.length}}
+            </div>
+        </div>
+    </div>
+</div>

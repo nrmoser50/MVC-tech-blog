@@ -19,6 +19,25 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/login', async (req, res) => {
+    console.log("here")
+
+        res.render('login', {
+          
+        });
+    
+});
+
+router.get('/signUp', async (req, res) => {
+    console.log("here")
+
+        res.render('signUp', {
+          
+        });
+    
+});
+
+
 // Render single blog and comments
 router.get('/post/:id', async (req, res) => {
     try {

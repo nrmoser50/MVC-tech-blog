@@ -6,7 +6,7 @@ const newPostHandler = async (event) => {
   const content = document.querySelector("#new-post-content").value.trim();
 
   // Send a POST request to the API endpoint
-  const response = await fetch(`api/posts`, {
+  const response = await fetch(`/api/post`, {
     method: "POST",
     body: JSON.stringify({ title, content }),
     headers: { "Content-Type": "application/json" },
@@ -14,12 +14,12 @@ const newPostHandler = async (event) => {
 
   if (response.ok) {
     // If successful, redirect browser to new post page
-    document.location.replace("/dashboard");
+    document.location.replace("/");
   } else {
     alert("Cannot add post");
   }
 };
 
 document
-  .querySelectorAll(".new-post-form")
+  .querySelector("#new-post-form")
   .addEventListener("submit", newPostHandler);
