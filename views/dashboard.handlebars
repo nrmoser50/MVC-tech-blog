@@ -9,9 +9,9 @@
         <li class="list-group-item">
           <h3>{{title}}</h3>
           <small>Created on {{createdAt}}</small>
-          <p>{{content}}</p>
-          <a href="/posts/edit/{{id}}" class="btn btn-sm btn-secondary">Edit</a>
-          <a href="/posts/delete/{{id}}" class="btn btn-sm btn-danger">Delete</a>
+          <p>{{post_content}}</p>
+          <a href="/post/edit/{{id}}" class="btn btn-sm btn-secondary">Edit</a>
+          <a href="/post/delete/{{id}}" class="btn btn-sm btn-danger">Delete</a>
         </li>
         {{/each}}
       </ul>

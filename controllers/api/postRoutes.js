@@ -34,9 +34,8 @@ router.post('/', async (req, res) => {
   try {
     const newPost = await Post.create({
       title: req.body.title,
-      content: req.body.content,
+      post_content: req.body.content,
       user_id: req.session.user_id,
-      // category_id: req.body.category_id
     });
     res.status(201).json(newPost);
   } catch (err) {
@@ -50,7 +49,7 @@ router.put('/:id', async (req, res) => {
     const updatedPost = await Post.update(
       {
         title: req.body.title,
-        content: req.body.content,
+        content: req.body.post_content,
         category_id: req.body.category_id
       },
       {

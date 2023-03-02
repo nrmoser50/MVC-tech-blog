@@ -1,17 +1,17 @@
 [
     {
         "title": "My first post",
-        "content": "This is about handlebars.",
+        "post_content": "This is about handlebars.",
         "user_id": 1
     },
     {
         "title": "Here's a second post",
-        "content": "Let's chat about MVC structures",
+        "post_content": "Let's chat about MVC structures",
         "user_id": 2
     },
     {
         "title": "A third post even",
-        "content": "Struggling to deploy your project?",
+        "post_content": "Struggling to deploy your project?",
         "user_id": 3
     }
 ]
