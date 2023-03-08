@@ -10,8 +10,9 @@
           <h3>{{title}}</h3>
           <small>Created on {{createdAt}}</small>
           <p>{{post_content}}</p>
-          <a href="/post/edit/{{id}}" class="btn btn-sm btn-secondary">Edit</a>
-          <a href="/post/delete/{{id}}" class="btn btn-sm btn-danger">Delete</a>
+          <a href="/post/{{id}}" class="btn btn-sm btn-secondary">Edit</a>
+          <button data-id="{{id}}" class="btn btn-sm btn-danger delete-btn">Delete</button>
+         
         </li>
         {{/each}}
       </ul>

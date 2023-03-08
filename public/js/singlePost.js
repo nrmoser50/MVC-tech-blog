@@ -20,6 +20,33 @@ const newPostHandler = async (event) => {
   }
 };
 
+
+const deleteFormHandler = async (event) => {
+  event.preventDefault();
+  console.log("here again");
+
+  const id = event.target.getAttribute("data-id");
+  console.log(id);
+  const response = await fetch(`/api/post/${id}`, {
+    method: "DELETE",
+  });
+
+  if (response.ok) {
+  document.location.replace("/");
+  } else {
+    alert(response.statusText);
+  }
+}
+
+const deleteButtons = document.querySelectorAll(".delete-btn");
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", deleteFormHandler);
+});
+
 document
   .querySelector("#new-post-form")
   .addEventListener("submit", newPostHandler);
+
+
+
+

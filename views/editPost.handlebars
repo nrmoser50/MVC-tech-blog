@@ -1,4 +1,4 @@
-<form class="edit-post-form" action="/api/post/{{id}}" method="PUT">
+
 <div class="form-group">
     <div class="mb-3">
     <label for="title">Title</label>
@@ -16,10 +16,9 @@
     <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
 </div>
 </div>
-<button type="submit" class="btn btn-primary">Save Changes</button>
-<button type="button" class="btn btn-danger delete-post-btn">Delete Post</button>
-</form>
+<button type="submit" class="btn btn-primary delete-btn">Save Changes</button>
+<button data-id="{{post.id}}" type="button" class="btn btn-danger delete-post-btn">Delete Post</button>
+
 
 <script src="/js/editPost.js"></script>
-<script src="/js/deletePost.js"></script>
 <script src="/js/comment.js"></script>

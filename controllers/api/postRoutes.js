@@ -45,12 +45,13 @@ router.post('/', async (req, res) => {
 
 // UPDATE a post by ID
 router.put('/:id', async (req, res) => {
+  console.log("let me edit!");
   try {
+    console.log("please edit")
     const updatedPost = await Post.update(
       {
         title: req.body.title,
-        content: req.body.post_content,
-        category_id: req.body.category_id
+        content: req.body.content,
       },
       {
         where: {
@@ -70,17 +71,18 @@ router.put('/:id', async (req, res) => {
 
 // DELETE a post by ID
 router.delete('/:id', async (req, res) => {
+  console.log("ugh it's frustrating")
   try {
+    console.log("why no delete?")
     const deletedPost = await Post.destroy({
-      where: {
-        id: req.params.id
-      }
+        where: {
+        id: req.params.id}
     });
+    res.status(201).json(deletedPost);
     if (!deletedPost) {
       res.status(404).json({ message: 'No post found with this id!' });
       return;
     }
-    res.status(200).json(deletedPost);
   } catch (err) {
     res.status(500).json(err);
   }
