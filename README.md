@@ -13,13 +13,13 @@ This is a basic CMS-style blog site that was created using the Model, View, Cont
 This application was created using Node.js, express for the server, and sequelize to connect to a mysql database entitled "tech_blog_db".  All user, post, and comment data is stored in tech_blog_db.  The live app is currently deployed on Heroku, using the JAWSDB add on to store data.  All passwords have been encrypted using the bcrypt Node.js package.  The HTML views templates are generated using Handlebars.js.
 
 ## Installation
-1.  Navigate to the GitHub repository ( https://github.com/nystephens/mvc-tech-blog) in your web browser and click the green dropdown menu that says “Code”.  Copy the SSH key to your clipboard and then open your terminal.  
+1.  Navigate to the GitHub repository ( https://github.com/nrmoser50/mvc-tech-blog) in your web browser and click the green dropdown menu that says “Code”.  Copy the SSH key to your clipboard and then open your terminal.  
 
 2.  In your terminal navigate to the directory you wish to house this repository.   
 
 3.  Type “git clone” into your command line and paste the SSH key you copied from the repository, then hit Enter.  A new file titled “mvc-tech-blog” containing the necessary files will appear in your chosen directory.  Due to file size, Node.js and is necessary  modules will not be cloned to your repository.  Please continue reading the instructions to find out how to install these modules on your computer.   
 
-4.  Since this application uses Node.js you will have to install Node and the required Node modules to operate it, make edits, and/or run the server locally.  For detailed instructions on how  to install Node.js to your computer please visit: https://www.guru99.com/download-install-node-js.html  
+4.  Since this application uses Node.js you will have to install Node and the required Node modules to operate it, make edits, and/or run the server locally. 
 
 5.  Once Node is successfully installed on your computer, navigate to the project's root directory in your terminal.  For quick access you can right click the root directory in VS Code and click the option “Open in Integrated Terminal”. 
 
