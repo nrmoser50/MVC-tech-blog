@@ -31,7 +31,7 @@ router.get('/login', async (req, res) => {
 router.get('/signup', async (req, res) => {
     console.log("here")
 
-        res.send('<h1>Welcome!</h1>')
+        res.render('signup')
     
 });
 
